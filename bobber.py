@@ -189,7 +189,10 @@ def process_content(request,  DOMAIN, **kwargs):
 	for url in soup.find_all('a'):
 		try:
 			if(url.get('href')[0] == "/"):
-				url["href"] = urljoin(REDIRECT_DOMAIN,url.get('href'))
+				if(DOMAIN == PHISHAPP_DOMAIN):
+					url["href"] = ("%s%s" % (urljoin(REDIRECT_DOMAIN,url.get('href')),gargs))
+				else:
+					url["href"] = urljoin(REDIRECT_DOMAIN,url.get('href'))
 		except:
 			pass
 	for img in soup.find_all('img'):
