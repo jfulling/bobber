@@ -62,7 +62,7 @@ For example, if the bobber DB is named *bobber.example.db*, its contents will be
 
 # How does it work?
 ## Summary
-`bobber.py` is a Python Flask application that serves as a reverse proxy which serves content of both the phishing application and the spoofed application under one URL. I wanted to expand on the core idea of otu-plz and attempt to make an application that can sit in front of an arbitrary red team phishing application and preventing response teams from accessing the application, while enabling end users to use the phishing application to its full extent.
+`bobber.py` is a Python Flask application that serves as a reverse proxy which serves content of both the phishing application and the spoofed application under one URL. I wanted to expand on the core idea of otu-plz and attempt to make an application that can sit in front of an arbitrary red team phishing application while preventing response teams from accessing the application, and enabling end users to use the phishing application to its full extent.
 
 Bobber performs automatic processing for relative and (some) absolute links to ensure a user can click through either the sites listed under PHISHAPP_DOMAIN or SPOOFED_DOMAIN without performing unnecessary redirects.
 
