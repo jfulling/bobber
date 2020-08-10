@@ -66,7 +66,7 @@ For example, if the bobber DB is named *bobber.example.db*, its contents will be
 
 Bobber performs automatic processing for relative and (some) absolute links to ensure a user can click through either the sites listed under PHISHAPP_DOMAIN or SPOOFED_DOMAIN without performing unnecessary redirects.
 
-**Note:** Bobber is not meant to work with content-heavy streaming platforms (like YouTube or Reddit), but most small sites appear to have base functionality without much issue (XKCD, DaveRamsey, Aetna). Feel free to contact me with necessary updates to load site content better.
+**Note:** Bobber is not meant to work with content-heavy streaming platforms (like YouTube or Reddit), but most small sites appear to have base functionality without much issue (tested on XKCD, DaveRamsey, Aetna, and a few random wordpress sites). Feel free to contact me with necessary updates to load site content better.
 
 ## How does bobber know what's meant for the phishing application?
 `bobber.py` has simple logic to determine what traffic is meant for the phishing application - it checks to see whether the TOKEN_DELIMITER is active in the GET arguments. Even if the phishing application doesn't support the TOKEN_DELIMITER value in its functionality, this parameter will still be required for initial access. Afterwards, bobber will superimpose the TOKEN_DELIMITER value on every link meant for the phishing application to ensure users can interact with the phishing app seamlessly.
